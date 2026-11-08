@@ -626,9 +626,10 @@ plot_progression_rates <- function(model_output_df, type = "type", unit_time = "
   }
 
   if (use_sample_size) {
-    point_graph <- point_graph +
-      scale_shape_binned(name = "Number of\nisolates",
-                         breaks = c(5,10,25,50,100))
+  point_graph <- point_graph +
+    scale_shape_binned(
+      name = "Number of\nisolates"
+    )
   }
 
   return(point_graph)

@@ -5,13 +5,13 @@ data {
   int<lower=0> j_max;
   int<lower=0> k_max;
   int<lower=0> n_obs;
-  int<lower=0> i_values[n_obs];
-  int<lower=0> j_values[n_obs];
-  int<lower=0> k_values[n_obs];
-  int<lower=0> c_ij[n_obs];
-  int<lower=0> d_ij[n_obs];
-  int<lower=0> n_i[n_obs];
-  int<lower=0> N_i[n_obs];
+  array[n_obs] int<lower=0> i_values;
+  array[n_obs] int<lower=0> j_values;
+  array[n_obs] int<lower=0> k_values;
+  array[n_obs] int<lower=0> c_ij;
+  array[n_obs] int<lower=0> d_ij;
+  array[n_obs] int<lower=0> n_i;
+  array[n_obs] int<lower=0> N_i;
   vector<lower=0>[n_obs] t_i;
 
 }
